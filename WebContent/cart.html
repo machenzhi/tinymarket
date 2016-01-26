@@ -1,0 +1,244 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>晒迷人微商城</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="icon" type="image/png" href="assets/i/favicon.png">
+<link rel="stylesheet" href="assets/css/amazeui.min.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<script>
+	function updateProductNum(num, price) {
+		var num = parseInt(num);
+		var existNum = parseInt($("#num").val());
+		var finalNum = existNum + num;
+		//不能小于1
+		if (finalNum < 1) {
+			return;
+			//不能大于库存
+		} else if (finalNum > 10) {
+			return;
+		} else {
+			$("#num").val(finalNum);
+			var price = parseFloat(price);
+			var totalPrice = finalNum * price;
+			$("#totalPrice").val(totalPrice.toFixed(2));
+			$("#totalPrice").text("¥" + totalPrice.toFixed(2));
+		}
+	}
+
+	//删除指定行
+	function deleteProduct(liId) {
+		$("#" + liId).remove();
+	}
+</script>
+</head>
+<body>
+	<!-- Header -->
+	<header data-am-widget="header" class="am-header am-header-default">
+		<h1 class="am-header-title">我的购物车</h1>
+	</header>
+
+	<!-- List -->
+	<div data-am-widget="list_news"
+		class="am-list-news am-list-news-default">
+		<div class="am-list-news-bd">
+			<ul class="am-list">
+				<!--缩略图在标题左边-->
+				<li id="1li" style="border-top-style: none;"
+					class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+					<div class="am-u-sm-1 am-list-thumb">
+						<label class="am-checkbox"> <input type="checkbox"
+							value="" data-am-ucheck></label>
+					</div>
+					<div class="am-u-sm-2 am-list-thumb">
+						<a href="javascript: void(0)"> <img src="img/a1.png"
+							width="200" height="200" alt="徐福记健康饼干" />
+						</a>
+					</div>
+					<div class="am-u-sm-9 am-list-main">
+						<h3 class="am-list-item-hd">
+							<a href="javascript: void(0)">徐福记健康饼干111</a>
+						</h3>
+						<div class="am-input-group am-u-sm-8" style="padding: 0px;">
+							<span onClick="javascript:updateProductNum('-1','1.53')"
+								class="am-input-group-label"><i class="am-icon-minus"></i></span>
+							<input type="text" class="am-form-field" id="num" name="num"
+								value="1"> <span
+								onClick="javascript:updateProductNum('1','1.53')"
+								class="am-input-group-label"><i class="am-icon-plus"></i></span>
+						</div>
+						<div class="am-list-item-text am-u-sm-4"
+							style="text-align: right; padding: 0px;">
+							<a href="javascript: void(0)" onClick="deleteProduct('1li')">删除</a>
+						</div>
+						<div class="am-list-item-text am-u-sm-6" style="padding: 0px;">单价：¥1.53</div>
+						<div class="am-list-item-text am-u-sm-6"
+							style="text-align: right; padding: 0px;" id="totalPrice">¥1.53</div>
+					</div>
+				</li>
+				<li id="2li"
+					class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+					<div class="am-u-sm-1 am-list-thumb">
+						<label class="am-checkbox"> <input type="checkbox"
+							value="" data-am-ucheck></label>
+					</div>
+					<div class="am-u-sm-2 am-list-thumb">
+						<a href="javascript: void(0)"> <img src="img/a1.png"
+							width="200" height="200" alt="徐福记健康饼干" />
+						</a>
+					</div>
+					<div class="am-u-sm-9 am-list-main">
+						<h3 class="am-list-item-hd">
+							<a href="javascript: void(0)">徐福记健康饼干222</a>
+						</h3>
+						<div class="am-input-group am-u-sm-8" style="padding: 0px;">
+							<span onClick="javascript:updateProductNum('-1','1.53')"
+								class="am-input-group-label"><i class="am-icon-minus"></i></span>
+							<input type="text" class="am-form-field" id="num" name="num"
+								value="1"> <span
+								onClick="javascript:updateProductNum('1','1.53')"
+								class="am-input-group-label"><i class="am-icon-plus"></i></span>
+						</div>
+						<div class="am-list-item-text am-u-sm-4"
+							style="text-align: right; padding: 0px;">
+							<a href="javascript: void(0)" onClick="deleteProduct('2li')">删除</a>
+						</div>
+						<div class="am-list-item-text am-u-sm-6" style="padding: 0px;">单价：¥1.53</div>
+						<div class="am-list-item-text am-u-sm-6"
+							style="text-align: right; padding: 0px;" id="totalPrice">¥1.53</div>
+					</div>
+				</li>
+				<li id="3li"
+					class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+					<div class="am-u-sm-1 am-list-thumb">
+						<label class="am-checkbox"> <input type="checkbox"
+							value="" data-am-ucheck></label>
+					</div>
+					<div class="am-u-sm-2 am-list-thumb">
+						<a href="javascript: void(0)"> <img src="img/a1.png"
+							width="200" height="200" alt="徐福记健康饼干" />
+						</a>
+					</div>
+					<div class="am-u-sm-9 am-list-main">
+						<h3 class="am-list-item-hd">
+							<a href="javascript: void(0)">徐福记健康饼干333</a>
+						</h3>
+						<div class="am-input-group am-u-sm-8" style="padding: 0px;">
+							<span onClick="javascript:updateProductNum('-1','1.53')"
+								class="am-input-group-label"><i class="am-icon-minus"></i></span>
+							<input type="text" class="am-form-field" id="num" name="num"
+								value="1"> <span
+								onClick="javascript:updateProductNum('1','1.53')"
+								class="am-input-group-label"><i class="am-icon-plus"></i></span>
+						</div>
+						<div class="am-list-item-text am-u-sm-4"
+							style="text-align: right; padding: 0px;">
+							<a href="javascript: void(0)" onClick="deleteProduct('3li')">删除</a>
+						</div>
+						<div class="am-list-item-text am-u-sm-6" style="padding: 0px;">单价：¥1.53</div>
+						<div class="am-list-item-text am-u-sm-6"
+							style="text-align: right; padding: 0px;" id="totalPrice">¥1.53</div>
+					</div>
+				</li>
+				<li id="4li"
+					class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+					<div class="am-u-sm-1 am-list-thumb">
+						<label class="am-checkbox"> <input type="checkbox"
+							value="" data-am-ucheck></label>
+					</div>
+					<div class="am-u-sm-2 am-list-thumb">
+						<a href="javascript: void(0)"> <img src="img/a1.png"
+							width="200" height="200" alt="徐福记健康饼干" />
+						</a>
+					</div>
+					<div class="am-u-sm-9 am-list-main">
+						<h3 class="am-list-item-hd">
+							<a href="javascript: void(0)">徐福记健康饼干444</a>
+						</h3>
+						<div class="am-input-group am-u-sm-8" style="padding: 0px;">
+							<span onClick="javascript:updateProductNum('-1','1.53')"
+								class="am-input-group-label"><i class="am-icon-minus"></i></span>
+							<input type="text" class="am-form-field" id="num" name="num"
+								value="1"> <span
+								onClick="javascript:updateProductNum('1','1.53')"
+								class="am-input-group-label"><i class="am-icon-plus"></i></span>
+						</div>
+						<div class="am-list-item-text am-u-sm-4"
+							style="text-align: right; padding: 0px;">
+							<a href="javascript: void(0)" onClick="deleteProduct('4li')">删除</a>
+						</div>
+						<div class="am-list-item-text am-u-sm-6" style="padding: 0px;">单价：¥1.53</div>
+						<div class="am-list-item-text am-u-sm-6"
+							style="text-align: right; padding: 0px;" id="totalPrice">¥1.53</div>
+					</div>
+				</li>
+				<li id="5li"
+					class="am-g am-list-item-desced am-list-item-thumbed am-list-item-thumb-left">
+					<div class="am-u-sm-1 am-list-thumb">
+						<label class="am-checkbox"> <input type="checkbox"
+							value="" data-am-ucheck></label>
+					</div>
+					<div class="am-u-sm-2 am-list-thumb">
+						<a href="javascript: void(0)"> <img src="img/a1.png"
+							width="200" height="200" alt="徐福记健康饼干" />
+						</a>
+					</div>
+					<div class="am-u-sm-9 am-list-main">
+						<h3 class="am-list-item-hd">
+							<a href="javascript: void(0)">徐福记健康饼干555</a>
+						</h3>
+						<div class="am-input-group am-u-sm-8" style="padding: 0px;">
+							<span onClick="javascript:updateProductNum('-1','1.53')"
+								class="am-input-group-label"><i class="am-icon-minus"></i></span>
+							<input type="text" class="am-form-field" id="num" name="num"
+								value="1"> <span
+								onClick="javascript:updateProductNum('1','1.53')"
+								class="am-input-group-label"><i class="am-icon-plus"></i></span>
+						</div>
+						<div class="am-list-item-text am-u-sm-4"
+							style="text-align: right; padding: 0px;">
+							<a href="javascript: void(0)" onClick="deleteProduct('5li')">删除</a>
+						</div>
+						<div class="am-list-item-text am-u-sm-6" style="padding: 0px;">单价：¥1.53</div>
+						<div class="am-list-item-text am-u-sm-6"
+							style="text-align: right; padding: 0px;" id="totalPrice">¥1.53</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+	<div style="text-align: center;">
+		<a class="am-btn am-btn-danger" href="orderdetail.html"
+			target="_blank">去结算</a>
+	</div>
+
+	<!-- Navbar -->
+	<div data-am-widget="navbar" class="am-navbar am-cf am-navbar-default "
+		id="">
+		<ul class="am-navbar-nav am-cf am-avg-sm-4">
+			<li><a href="index.html"> <span class="am-icon-home"></span>
+					<span class="am-navbar-label">首页</span>
+			</a></li>
+			<li><a href="orderlist.html"> <span class="am-icon-list-ul"></span>
+					<span class="am-navbar-label">订单</span>
+			</a></li>
+			<li><a href="cart.html"> <span class="am-icon-shopping-cart"></span>
+					<span class="am-navbar-label">购物车</span>
+			</a></li>
+			<li><a href="me.html"> <span class="am-icon-user"></span> <span
+					class="am-navbar-label">我</span>
+			</a></li>
+		</ul>
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/amazeui.min.js"></script>
+</body>
+</html>
