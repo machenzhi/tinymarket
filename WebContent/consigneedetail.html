@@ -1,0 +1,53 @@
+<!doctype html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>晒迷人微商城</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="icon" type="image/png" href="assets/i/favicon.png">
+<link rel="stylesheet" href="assets/css/amazeui.min.css">
+<link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+	<!-- Header -->
+	<header data-am-widget="header" class="am-header am-header-default">
+		<h1 class="am-header-title">收货人信息</h1>
+	</header>
+
+	<form class="am-form" id="infoForm" name="consigneeForm" method="post"
+		enctype="multipart/form-data">
+		<input type="hidden" id="id" name="id" value="${consignee.id}" />
+		<div style="margin-top: 5px;"
+			class="am-input-group am-u-sm-12 am-u-md-12">
+			<span class="am-input-group-label" style="width: 100px;">姓名</span> <input
+				type="text" id="name" name="name" style="height: 39px;"
+				placeholder="输入收件人姓名" required />
+		</div>
+		<div style="margin-top: 5px;"
+			class="am-input-group am-u-sm-12 am-u-md-12">
+			<span class="am-input-group-label" style="width: 100px;">手机</span> <input
+				type="text" id="mobilephone" name="mobilephone"
+				style="height: 39px;" placeholder="输入收件人手机号码" required />
+		</div>
+		<div style="margin-top: 5px;"
+			class="am-input-group am-u-sm-12 am-u-md-12">
+			<span class="am-input-group-label" style="width: 100px;">地址</span>
+			<textarea class="" rows="5" id="address" name="address"
+				placeholder="输入收件人地址" required></textarea>
+		</div>
+	</form>
+	<!-- 居中按钮 -->
+	<div class="am-u-sm-12" style="margin-top: 5px; text-align: center;">
+		<a class="am-btn am-btn-primary" style="width: 100%"
+			href="javascript: void(0)" target="_blank">保存</a>
+	</div>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/amazeui.min.js"></script>
+</body>
+</html>
